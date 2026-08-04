@@ -7,12 +7,13 @@ tags: ["rogues", "stealth", "tactics", "home"]
 
 # Full On Rogues
 
-Welcome to **Full On Rogues** (`fullonrogues.org`), the canonical archive for shadow operatives, stealth tactics, specialized loadouts, and tactical intelligence.
+Welcome to **Full On Rogues** (`fullonrogues.org`), the canonical archive for shadow operatives, stealth tactics, specialized loadouts, and historical guild records.
 
 ---
 
-## Technical & Tactical Collections
+## Technical & Historical Collections
 
+- **[Guild Blog Archives](posts.md)**: 2011–2012 Feathermoon server blog posts & guild history (`POST-XXXX`).
 - **[Rogues Registry](rogues.md)**: Operative profiles and identity dossiers (`ROG-XXXX`).
 - **[Tactics & Strategy](tactics.md)**: Infiltration routes, evasion doctrine, and field protocols (`TAC-XXXX`).
 - **[Gear & Loadouts](gear.md)**: Specialized lockpicks, grapple gear, and signal dampeners (`GEAR-XXXX`).

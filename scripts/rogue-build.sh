@@ -23,6 +23,7 @@ python3 scripts/audit_markdown_links.py "$CONTENT_DIR"
   --layout-rule default glob:changelog/* "$THEME/layouts/compact.html" \
   --layout-rule default glob:gear/* "$THEME/layouts/compact.html" \
   --layout-rule default glob:guides/* "$THEME/layouts/compact.html" \
+  --layout-rule default glob:posts/* "$THEME/layouts/compact.html" \
   --layout-rule default glob:reference/* "$THEME/layouts/compact.html" \
   --layout-rule default glob:releases/* "$THEME/layouts/compact.html" \
   --layout-rule default glob:rogues/* "$THEME/layouts/compact.html" \
