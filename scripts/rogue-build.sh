@@ -20,15 +20,22 @@ python3 scripts/audit_markdown_links.py "$CONTENT_DIR"
   --html-dir "$DIST_DIR" \
   --sitemap \
   --site-url "$SITE_URL" \
+  --static-dir static \
+  --layout-rule default id:index "$THEME/layouts/home.html" \
   --layout-rule default glob:changelog/* "$THEME/layouts/compact.html" \
-  --layout-rule default glob:gear/* "$THEME/layouts/compact.html" \
-  --layout-rule default glob:guides/* "$THEME/layouts/compact.html" \
   --layout-rule default glob:posts/* "$THEME/layouts/compact.html" \
-  --layout-rule default glob:reference/* "$THEME/layouts/compact.html" \
-  --layout-rule default glob:releases/* "$THEME/layouts/compact.html" \
-  --layout-rule default glob:rogues/* "$THEME/layouts/compact.html" \
-  --layout-rule default glob:tactics/* "$THEME/layouts/compact.html" \
   --jobs "$BORIS_JOBS"
+
+# RSS and llms.txt are standalone export modes and cannot share an HTML-mode
+# invocation; each writes directly into the HTML target after the main build.
+"$BORIS_BIN" --input "$CONTENT_DIR" --llms-path "$DIST_DIR/llms.txt" --quiet
+"$BORIS_BIN" --input "$CONTENT_DIR" --rss --rss-path "$DIST_DIR/rss.xml" \
+  --site-url "$SITE_URL" \
+  --rss-title "Full On Rogues" \
+  --rss-description "Guild archive updates from Full On Rogues" \
+  --rss-limit 50 --quiet
+
+python3 scripts/enrich_html_head.py --dist "$DIST_DIR" --content "$CONTENT_DIR" --site-url "$SITE_URL"
 
 python3 scripts/audit_html_ids.py "$DIST_DIR"
 

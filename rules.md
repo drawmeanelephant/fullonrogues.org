@@ -7,7 +7,8 @@
    - Theme: `themes/cantilever/`
 
 2. **Frontmatter Constraints**:
-   - Allowed fields: `id`, `title`, `parent`, `status`, `tags`, `relations`.
+   - Allowed fields: `id`, `title`, `parent`, `status`, `tags`, `relations`, `published_at`, `summary`.
+   - `published_at` must be `YYYY-MM-DDTHH:MM:SSZ` (UTC).
    - Do not use arbitrary or unsupported frontmatter keys.
 
 3. **Validation & Deployment**:

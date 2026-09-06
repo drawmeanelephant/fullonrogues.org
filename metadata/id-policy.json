@@ -2,13 +2,7 @@
   "repository": "drawmeanelephant/fullonrogues.org",
   "collections": {
     "changelog": "RCHG",
-    "gear": "GEAR",
-    "guides": "RGDE",
-    "posts": "POST",
-    "reference": "RREF",
-    "releases": "RREL",
-    "rogues": "ROG",
-    "tactics": "TAC"
+    "posts": "POST"
   },
   "id_format": "{COLLECTION}/{PREFIX}-{NUMBER:04d}"
 }

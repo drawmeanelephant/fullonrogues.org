@@ -2,6 +2,7 @@
 title: "Changelog"
 id: changelog
 status: published
+summary: "Historical record of dossier additions and network updates."
 tags: ["changelog"]
 ---
 
