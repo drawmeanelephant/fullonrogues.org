@@ -7,7 +7,7 @@ Full On Rogues (`fullonrogues.org`) is a static technical archive compiled by [B
 ## Production Deployment
 
 * **Source of Record**: `drawmeanelephant/fullonrogues.org`
-* **Compiler**: [Boris](https://github.com/drawmeanelephant/boris) (CI tracks the `afterparty` branch)
+* **Compiler**: [Boris](https://github.com/drawmeanelephant/boris) (CI builds Boris from the `main` branch)
 * **Production Theme**: Cantilever (`themes/cantilever/`)
 * **Output Path**: `dist/cantilever/`
 * **Host**: Cloudflare Pages (`fullonrogues`)

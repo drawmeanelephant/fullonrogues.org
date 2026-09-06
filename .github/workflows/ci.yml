@@ -11,7 +11,7 @@ permissions:
 
 env:
   BORIS_REPOSITORY: https://github.com/drawmeanelephant/boris.git
-  BORIS_BRANCH: afterparty
+  BORIS_BRANCH: main
   BORIS_JOBS: 1
 
 jobs:
@@ -28,6 +28,17 @@ jobs:
         uses: mlugg/setup-zig@v2
         with:
           version: 0.16.0
+
+      - name: Cache Zig compiler directories
+        uses: actions/cache@v4
+        with:
+          path: |
+            ${{ runner.temp }}/zig-global-cache
+            ${{ runner.temp }}/zig-local-cache
+          key: ${{ runner.os }}-zig-${{ env.BORIS_BRANCH }}-${{ github.sha }}
+          restore-keys: |
+            ${{ runner.os }}-zig-${{ env.BORIS_BRANCH }}-
+            ${{ runner.os }}-zig-
 
       - name: Obtain Boris compiler
         run: |
