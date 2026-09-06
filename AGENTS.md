@@ -48,7 +48,7 @@ Use these scripts for local workflow, validation, and publishing:
 Boris enforces a **closed and constrained** frontmatter schema.
 
 * **Forbidden**: Do **not** introduce arbitrary YAML keys, legacy framework metadata, `updatedAt` fields, JSX/MDX components, executable expressions, or generic HTML components into record files.
-* **Strict Schema**: Only key-value attributes recognized by the Boris compiler frontmatter schema are permitted (`id`, `title`, `parent`, `status`, `tags`, `relations`). Unknown keys will trigger build or validation failures.
+* **Strict Schema**: Only key-value attributes recognized by the Boris compiler frontmatter schema are permitted (`id`, `title`, `parent`, `status`, `tags`, `relations`, `published_at`, `summary`). `published_at` must be `YYYY-MM-DDTHH:MM:SSZ` (UTC). Unknown keys will trigger build or validation failures.
 
 ---
 

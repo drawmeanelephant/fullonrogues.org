@@ -14,7 +14,7 @@ permissions:
 
 env:
   BORIS_REPOSITORY: https://github.com/drawmeanelephant/boris.git
-  BORIS_BRANCH: afterparty
+  BORIS_BRANCH: main
   BORIS_JOBS: 1
 
 jobs:
